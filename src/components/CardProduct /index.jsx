@@ -11,6 +11,7 @@ export function CardProduct({ product }) {
       <CardImage src={product.url} alt={product.name} />
       <div>
         <p>{product.name}</p>
+        <p2>{product.description}</p2>
         <strong>{product.currencyValue}</strong>
       </div>
       <CartButton onClick={() => putProductInCart(product)}></CartButton>

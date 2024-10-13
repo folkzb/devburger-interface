@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  padding: 20px;
+  padding: 40px; /* Aumentando o padding para mais espaço interno */
   border-radius: 8px;
   background-color: white;
   cursor: grab;
@@ -14,10 +14,10 @@ export const Container = styled.div`
 
   div {
     width: 100%;
-    height: 80px;
+    height: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start; /* Alinhando o conteúdo para o topo */
     gap: 5px;
 
     p {
@@ -25,7 +25,15 @@ export const Container = styled.div`
       color: #ff8c05;
       line-height: 20px;
       font-weight: 700;
-      margin-top: 40px;
+      margin-top: 20px; /* Ajustado para evitar muito espaço acima */
+    }
+
+    p2 {
+      font-size: 16px; /* Tamanho da fonte */
+      color: #000; /* Cor do texto (preto) */
+      line-height: 1.5; /* Altura da linha */
+      font-weight: 300; /* Peso da fonte (fina) */
+      margin-top: 10px; /* Espaçamento superior ajustado */
     }
 
     strong {
@@ -33,6 +41,7 @@ export const Container = styled.div`
       color: #363636;
       font-weight: 800;
       line-height: 20px;
+      margin-top: auto;
     }
   }
 `;

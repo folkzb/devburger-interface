@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import { Cart, Home, Login, Menu, Register } from '../containers';
+import { CartHeader } from '../components/CartHeader';
 
 export const router = createBrowserRouter([
   {
@@ -34,6 +35,11 @@ export const router = createBrowserRouter([
   },
   {
     path: '/carrinho',
-    element: <Cart />,
+    element: (
+      <>
+      <CartHeader />
+      <Cart />
+      <Footer />
+    </>),
   },
 ]);
