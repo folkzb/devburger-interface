@@ -89,9 +89,3 @@ export const Login = styled.button`
   background-color: transparent;
   border: none;
 `;
-
-export const LinkContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`;

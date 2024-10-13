@@ -10,7 +10,7 @@ import { Container } from './styles';
 
 export function CartResume() {
   const [finalPrice, setFinalPrice] = useState(0);
-  const [deliveryTax] = useState(500);
+  const [deliveryTax] = useState(5.00); // todo: api de preços com cep
 
   const navigate = useNavigate();
 
@@ -22,6 +22,10 @@ export function CartResume() {
     }, 0);
     setFinalPrice(sumAllItems);
   }, [cartProducts]);
+
+  const handleClick = () => {
+    navigate('/cardapio');
+  };
 
   const submitOrder = async () => {
     const products = cartProducts.map((product) => {
@@ -68,6 +72,9 @@ export function CartResume() {
         </div>
       </Container>
       <Button onClick={submitOrder}>Finalizar Pedido</Button>
+      <Button color="green" onClick={handleClick}>
+        Continuar Comprando
+      </Button>
     </div>
   );
 }
