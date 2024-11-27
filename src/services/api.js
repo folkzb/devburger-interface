@@ -1,7 +1,12 @@
+import dotenv from 'dotenv';
 import axios from 'axios';
 
+// Carrega as variáveis do arquivo .env
+dotenv.config();
+const APP_URL = +process.env.APP_URL;
+
 export const api = axios.create({
-  baseURL: 'http://localhost:3002',
+  baseURL: APP_URL,
 });
 
 api.interceptors.request.use((config) => {
