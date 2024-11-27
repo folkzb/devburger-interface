@@ -4,6 +4,9 @@ FROM node:18
 # Defina o diretório de trabalho dentro do container
 WORKDIR /app
 
+# Copie o arquivo .env (supondo que esteja no mesmo diretório que o Dockerfile)
+COPY .env .env
+
 # Instale as dependências do projeto
 RUN yarn install
 
